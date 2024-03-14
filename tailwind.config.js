@@ -10,6 +10,9 @@ export default {
         borders: "#D8E2E7",
         pureWhite: "#FFFFFF",
       },
+      fontFamily: {
+        sans: ["Inter", "sans-serif"],
+      },
     },
   },
   plugins: [],
