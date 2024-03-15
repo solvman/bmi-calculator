@@ -5,7 +5,7 @@ import Limitations from "./components/Limitations";
 
 function App() {
   return (
-    <main>
+    <main className="text-gunmetal">
       <Hero />
       <Result />
       <Tips />
