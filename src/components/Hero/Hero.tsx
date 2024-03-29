@@ -1,4 +1,5 @@
 import logo from "../../assets/images/logo.svg";
+import Calculator from "./components/Calculator";
 
 const Hero = () => {
   return (
@@ -15,15 +16,12 @@ const Hero = () => {
         </h1>
         <p className="mx-6 text-center leading-6">
           Better understand your weight in relation to your height using our
-          body mass index (BM) calculator. While BMI is not the sole determinant
-          of a healthy weight, it offers a valuable starting point to evaluate
-          your overall health and well-being.
+          body mass index (BMI) calculator. While BMI is not the sole
+          determinant of a healthy weight, it offers a valuable starting point
+          to evaluate your overall health and well-being.
         </p>
       </div>
-      <form className="shadow-card mx-6 -mt-[45%] flex flex-col gap-6 rounded-2xl bg-pureWhite p-6">
-        <h2>Enter your details below</h2>
-        <p>Form</p>
-      </form>
+      <Calculator />
     </section>
   );
 };
