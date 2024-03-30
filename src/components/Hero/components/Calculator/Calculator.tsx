@@ -8,7 +8,7 @@ function Calculator() {
           Enter your details below
         </legend>
         <div className="flex">
-          <RadioButton name="system" id="metric" label="Metric" />
+          <RadioButton name="system" id="metric" label="Metric" checked />
           <RadioButton name="system" id="imperial" label="Imperial" />
         </div>
       </fieldset>
