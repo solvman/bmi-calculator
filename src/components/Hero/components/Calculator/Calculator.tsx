@@ -7,10 +7,10 @@ function Calculator() {
         <legend className="mb-6 text-2xl font-semibold tracking-tighter">
           Enter your details below
         </legend>
-        <div className="flex">
+        <ul className="flex">
           <RadioButton name="system" id="metric" label="Metric" checked />
           <RadioButton name="system" id="imperial" label="Imperial" />
-        </div>
+        </ul>
       </fieldset>
     </form>
   );
