@@ -8,7 +8,7 @@ function RadioButton({ name, id, label }: RadioButtonProps) {
   return (
     <p className="flex w-1/2 items-center gap-[18px]">
       <input
-        className="h-[31px] w-[31px] stroke-slate-400"
+        className="border-border h-[31px] w-[31px] border"
         type="radio"
         name={name}
         id={id}
