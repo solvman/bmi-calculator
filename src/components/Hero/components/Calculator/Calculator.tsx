@@ -1,5 +1,5 @@
 import { useState } from "react";
-import RadioButton from "../../../common/RadioButton";
+import RadioButton from "@/components/common/RadioButton";
 
 const systemValues = ["metric", "imperial"] as const;
 type System = (typeof systemValues)[number];
@@ -21,7 +21,7 @@ function Calculator() {
               id={system}
               label={system}
               checked={value === system}
-              onClick={() => setValue(system)}
+              onChange={() => setValue(system)}
             />
           ))}
         </ul>

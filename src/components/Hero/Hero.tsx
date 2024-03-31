@@ -1,4 +1,4 @@
-import logo from "../../assets/images/logo.svg";
+import logo from "@/assets/images/logo.svg";
 import Calculator from "./components/Calculator";
 
 const Hero = () => {
