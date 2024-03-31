@@ -17,7 +17,10 @@ function RadioButton({ name, id, label, ...rest }: RadioButtonProps) {
         value={id}
         {...rest}
       />
-      <label htmlFor={id} className="text-base font-semibold leading-6">
+      <label
+        htmlFor={id}
+        className="text-base font-semibold capitalize leading-6"
+      >
         {label}
       </label>
     </li>
