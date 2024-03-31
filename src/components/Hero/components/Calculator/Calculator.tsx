@@ -1,6 +1,9 @@
 import { useState } from "react";
 import RadioButton from "@/components/common/RadioButton";
 
+import MetricForm from "./components/MetricForm";
+import ImperialForm from "./components/ImperialForm";
+
 const systemValues = ["metric", "imperial"] as const;
 type System = (typeof systemValues)[number];
 
@@ -26,7 +29,7 @@ function Calculator() {
           ))}
         </ul>
       </fieldset>
-      <p className="text-2xl">{value}</p>
+      {value === "metric" ? <MetricForm /> : <ImperialForm />}
     </form>
   );
 }
