@@ -2,10 +2,10 @@ import { useState } from "react";
 import RadioButton from "../../../common/RadioButton";
 
 const systemValues = ["metric", "imperial"] as const;
-type TSytstem = (typeof systemValues)[number];
+type System = (typeof systemValues)[number];
 
 function Calculator() {
-  const [value, setValue] = useState<TSytstem>("metric");
+  const [value, setValue] = useState<System>("metric");
 
   return (
     <form className="mx-6 -mt-[45%] flex flex-col gap-6 rounded-2xl bg-pureWhite p-6 shadow-card">
