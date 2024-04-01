@@ -10,7 +10,7 @@ function RadioButton({ name, id, label, ...rest }: RadioButtonProps) {
   return (
     <li className="flex w-1/2 items-center gap-[18px]">
       <input
-        className="h-[31px] w-[31px] border border-borders text-blue/15 transition-all checked:border-none checked:border-white focus:ring-white"
+        className="h-[31px] w-[31px] border border-borders text-blue/15 transition-all checked:border-none checked:border-white hover:border-blue focus:ring-white"
         type="radio"
         name={name}
         id={id}
