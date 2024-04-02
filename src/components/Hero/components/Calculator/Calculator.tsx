@@ -11,7 +11,7 @@ function Calculator() {
   const [value, setValue] = useState<System>("metric");
 
   return (
-    <form className="mx-6 -mt-[45%] flex flex-col gap-6 rounded-2xl bg-pureWhite p-6 shadow-card">
+    <article className="mx-6 -mt-[45%] flex flex-col gap-6 rounded-2xl bg-pureWhite p-6 shadow-card">
       <fieldset className="border-red flex flex-col gap-6">
         <legend className="mb-6 text-2xl font-semibold tracking-tighter">
           Enter your details below
@@ -30,7 +30,7 @@ function Calculator() {
         </ul>
       </fieldset>
       {value === "metric" ? <MetricForm /> : <ImperialForm />}
-    </form>
+    </article>
   );
 }
 export default Calculator;
