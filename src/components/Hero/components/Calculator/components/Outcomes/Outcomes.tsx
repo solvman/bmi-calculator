@@ -7,7 +7,7 @@ export const Outcomes = () => {
           23.4
         </p>
       </div>
-      <p className="leadin text-sm">
+      <p className="text-sm">
         Your BMI suggests you're a healthy weight. Your ideal weight is between{" "}
         <strong>63.3kg - 82.3kg</strong>
       </p>
