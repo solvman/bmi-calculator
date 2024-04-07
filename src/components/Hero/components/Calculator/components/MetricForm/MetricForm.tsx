@@ -51,7 +51,7 @@ export const MetricForm = () => {
           />
         </div>
       </form>
-      <Outcomes bmi={bmi} />
+      <Outcomes bmi={bmi} height={height} system={"metric"} />
     </>
   );
 };
