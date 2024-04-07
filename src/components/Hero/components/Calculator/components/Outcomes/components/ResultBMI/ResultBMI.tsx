@@ -15,7 +15,7 @@ export const ResultBMI = ({ bmi, height, system }: ResultBMIProps) => {
       <div>
         <h3 className="mb-2 font-semibold">Your BMI is...</h3>
         <p className="text-5xl font-semibold leading-[1.1] tracking-tighter">
-          {bmi}
+          {bmi.toFixed(1)}
         </p>
       </div>
       <p className="text-sm">

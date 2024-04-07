@@ -27,6 +27,7 @@ export const useCalculateBmi = (system: System) => {
     weight = +values.weightSt * 14 + +values.weightLb;
   }
 
+  console.log({ height, weight, system });
   const bmi = calculateBmi(height, weight, system);
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {

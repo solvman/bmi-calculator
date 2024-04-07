@@ -1,9 +1,12 @@
 import NumberInput from "@/components/common/NumberInput";
 import Outcomes from "../Outcomes";
 import { useCalculateBmi } from "@/hooks/useCalculateBmi";
+import { System } from "@/utils/types";
 
 export const MetricForm = () => {
-  const { values, onChange, bmi, height } = useCalculateBmi("metric");
+  const system: System = "metric";
+
+  const { values, onChange, bmi, height } = useCalculateBmi(system);
 
   return (
     <>
@@ -39,7 +42,7 @@ export const MetricForm = () => {
           />
         </div>
       </form>
-      <Outcomes bmi={bmi} height={height} system={"metric"} />
+      <Outcomes bmi={bmi} height={height} system={system} />
     </>
   );
 };

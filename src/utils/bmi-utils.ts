@@ -8,21 +8,23 @@ import { System } from "./types";
 const UNDERWEIGHT_BMI = 18.5;
 const HEALTHY_WEIGHT_BMI = 24.9;
 const OVERWEIGHT_BMI = 29.9;
+const IMPERIAL_MULTIPLIER = 703;
+const METRIC_MULTIPLIER = 100;
+const LB_PER_STONE = 14;
 
 function calculateBmi(
   height: number,
   weight: number,
   system: System = "metric",
 ): number {
-  const bmiMultiplier = system === "metric" ? 1 : 703;
+  const bmiImperialMultiplier = system === "metric" ? 1 : IMPERIAL_MULTIPLIER;
+  const bmiMetricMultiplier = system === "imperial" ? 1 : METRIC_MULTIPLIER;
 
   if (height === 0 || weight === 0) {
     return 0;
   }
 
-  return parseFloat(
-    ((weight / (height / 100) ** 2) * bmiMultiplier).toFixed(1),
-  );
+  return (weight / (height / bmiMetricMultiplier) ** 2) * bmiImperialMultiplier;
 }
 
 function getCondition(bmi: number): string {
@@ -37,19 +39,32 @@ function getCondition(bmi: number): string {
   }
 }
 
+const convertToStonesAndPounds = (weight: number): string => {
+  const stones = Math.floor(weight / LB_PER_STONE);
+  const pounds = Math.round(weight % LB_PER_STONE);
+  return `${stones}st ${pounds}lb`;
+};
+
 const getHealthyWeight = (
   height: number,
   system: System = "metric",
 ): [string, string] => {
   if (system === "metric") {
-    const lowerLimit = UNDERWEIGHT_BMI * (height / 100) ** 2;
-    const upperLimit = HEALTHY_WEIGHT_BMI * (height / 100) ** 2;
+    const heightSquared = (height / METRIC_MULTIPLIER) ** 2;
+    const lowerLimit = UNDERWEIGHT_BMI * heightSquared;
+    const upperLimit = HEALTHY_WEIGHT_BMI * heightSquared;
     return [`${lowerLimit.toFixed(1)}kg`, `${upperLimit.toFixed(1)}kg`];
   }
   if (system === "imperial") {
-    const lowerLimit = UNDERWEIGHT_BMI * height ** 2;
-    const upperLimit = HEALTHY_WEIGHT_BMI * height ** 2;
-    return [lowerLimit.toFixed(1), upperLimit.toFixed(1)];
+    const heightSquared = height ** 2;
+    const lowerLimit = (UNDERWEIGHT_BMI * heightSquared) / IMPERIAL_MULTIPLIER;
+    const upperLimit =
+      (HEALTHY_WEIGHT_BMI * heightSquared) / IMPERIAL_MULTIPLIER;
+
+    return [
+      convertToStonesAndPounds(lowerLimit),
+      convertToStonesAndPounds(upperLimit),
+    ];
   }
 
   return ["", ""];
