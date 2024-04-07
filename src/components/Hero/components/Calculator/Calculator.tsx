@@ -3,9 +3,8 @@ import RadioButton from "@/components/common/RadioButton";
 
 import MetricForm from "./components/MetricForm";
 import ImperialForm from "./components/ImperialForm";
-
-const systemValues = ["metric", "imperial"] as const;
-type System = (typeof systemValues)[number];
+import type { System } from "@/utils/types";
+import { SYSTEM_VALUES } from "@/utils/types";
 
 function Calculator() {
   const [value, setValue] = useState<System>("metric");
@@ -17,7 +16,7 @@ function Calculator() {
           Enter your details below
         </legend>
         <ul className="flex">
-          {systemValues.map((system) => (
+          {SYSTEM_VALUES.map((system) => (
             <RadioButton
               key={system}
               name="system"

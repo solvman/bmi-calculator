@@ -1,10 +1,11 @@
 import ResultBMI from "./components/ResultBMI";
 import Welcome from "./components/Welcome";
+import type { System } from "@/utils/types";
 
 interface OutcomesProps {
   bmi: number;
-  height: string;
-  system: string;
+  height: number;
+  system: System;
 }
 
 export const Outcomes = ({ bmi = 0, height, system }: OutcomesProps) => {

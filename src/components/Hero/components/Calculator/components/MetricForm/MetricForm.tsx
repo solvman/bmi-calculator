@@ -1,21 +1,9 @@
 import NumberInput from "@/components/common/NumberInput";
 import Outcomes from "../Outcomes";
-import { useState } from "react";
+import { useCalculateBmi } from "@/hooks/useCalculateBmi";
 
 export const MetricForm = () => {
-  const [height, setHeight] = useState("");
-  const [weight, setWeight] = useState("");
-
-  const calulateBMI = () => {
-    if (+height > 0 && +weight > 0) {
-      return parseFloat((+weight / (+height / 100) ** 2).toFixed(1));
-    }
-    return 0;
-  };
-
-  const bmi = calulateBMI();
-
-  console.log({ bmi });
+  const { values, onChange, bmi, height } = useCalculateBmi("metric");
 
   return (
     <>
@@ -31,8 +19,8 @@ export const MetricForm = () => {
             unit="cm"
             name="height"
             id="height"
-            value={height}
-            onChange={(e) => setHeight(e.target.value)}
+            value={values.height}
+            onChange={onChange}
           />
         </div>
         <div className="flex flex-col gap-y-2">
@@ -46,8 +34,8 @@ export const MetricForm = () => {
             unit="kg"
             name="weight"
             id="weight"
-            value={weight}
-            onChange={(e) => setWeight(e.target.value)}
+            value={values.weight}
+            onChange={onChange}
           />
         </div>
       </form>

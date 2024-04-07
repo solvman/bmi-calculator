@@ -1,18 +1,14 @@
 import { getCondition, getHealthyWeight } from "@/utils/bmi-utils";
+import { System } from "@/utils/types";
 
 interface ResultBMIProps {
   bmi: number;
-  height: string;
-  system: string;
+  height: number;
+  system: System;
 }
 
 export const ResultBMI = ({ bmi, height, system }: ResultBMIProps) => {
-  const [lowerLimit, upperLimit] = getHealthyWeight(
-    +height,
-    system === "metric",
-  );
-
-  const unit = system === "metric" ? "kg" : "lbs";
+  const [lowerLimit, upperLimit] = getHealthyWeight(height, system);
 
   return (
     <>
@@ -26,9 +22,7 @@ export const ResultBMI = ({ bmi, height, system }: ResultBMIProps) => {
         Your BMI suggests you're {getCondition(bmi)}. Your ideal weight is
         between{" "}
         <strong>
-          {lowerLimit}
-          {unit} - {upperLimit}
-          {unit}
+          {lowerLimit} - {upperLimit}
         </strong>
       </p>
     </>

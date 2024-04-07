@@ -3,9 +3,27 @@
 // - Overweight: BMI 25 to 29.9
 // - Obese: BMI 30 or greater
 
+import { System } from "./types";
+
 const UNDERWEIGHT_BMI = 18.5;
 const HEALTHY_WEIGHT_BMI = 24.9;
 const OVERWEIGHT_BMI = 29.9;
+
+function calculateBmi(
+  height: number,
+  weight: number,
+  system: System = "metric",
+): number {
+  const bmiMultiplier = system === "metric" ? 1 : 703;
+
+  if (height === 0 || weight === 0) {
+    return 0;
+  }
+
+  return parseFloat(
+    ((weight / (height / 100) ** 2) * bmiMultiplier).toFixed(1),
+  );
+}
 
 function getCondition(bmi: number): string {
   if (bmi < UNDERWEIGHT_BMI) {
@@ -21,12 +39,20 @@ function getCondition(bmi: number): string {
 
 const getHealthyWeight = (
   height: number,
-  isMetric: boolean,
+  system: System = "metric",
 ): [string, string] => {
-  const bmiMultiplier = isMetric ? 1 : 703;
-  const lowerLimit = UNDERWEIGHT_BMI * (height / 100) ** 2 * bmiMultiplier;
-  const upperLimit = HEALTHY_WEIGHT_BMI * (height / 100) ** 2 * bmiMultiplier;
-  return [lowerLimit.toFixed(1), upperLimit.toFixed(1)];
+  if (system === "metric") {
+    const lowerLimit = UNDERWEIGHT_BMI * (height / 100) ** 2;
+    const upperLimit = HEALTHY_WEIGHT_BMI * (height / 100) ** 2;
+    return [`${lowerLimit.toFixed(1)}kg`, `${upperLimit.toFixed(1)}kg`];
+  }
+  if (system === "imperial") {
+    const lowerLimit = UNDERWEIGHT_BMI * height ** 2;
+    const upperLimit = HEALTHY_WEIGHT_BMI * height ** 2;
+    return [lowerLimit.toFixed(1), upperLimit.toFixed(1)];
+  }
+
+  return ["", ""];
 };
 
-export { getCondition, getHealthyWeight };
+export { getCondition, getHealthyWeight, calculateBmi };
