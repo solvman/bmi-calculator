@@ -1,10 +1,14 @@
-export const ResultBMI = () => {
+interface ResultBMIProps {
+  bmi: number;
+}
+
+export const ResultBMI = ({ bmi }: ResultBMIProps) => {
   return (
     <>
       <div>
         <h3 className="mb-2 font-semibold">Your BMI is...</h3>
         <p className="text-5xl font-semibold leading-[1.1] tracking-tighter">
-          23.4
+          {bmi}
         </p>
       </div>
       <p className="text-sm">
