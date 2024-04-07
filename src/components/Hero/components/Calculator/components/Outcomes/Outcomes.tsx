@@ -1,16 +1,14 @@
-export const Outcomes = () => {
+import ResultBMI from "./components/ResultBMI";
+import Welcome from "./components/Welcome";
+
+interface OutcomesProps {
+  bmi: number;
+}
+
+export const Outcomes = ({ bmi = 0 }: OutcomesProps) => {
   return (
     <section className="flex flex-col gap-y-6 rounded-2xl bg-gradient-to-r from-blue to-[#587DFF] p-8 text-pureWhite">
-      <div>
-        <h3 className="mb-2 font-semibold">Your BMI is...</h3>
-        <p className="text-5xl font-semibold leading-[1.1] tracking-tighter">
-          23.4
-        </p>
-      </div>
-      <p className="text-sm">
-        Your BMI suggests you're a healthy weight. Your ideal weight is between{" "}
-        <strong>63.3kg - 82.3kg</strong>
-      </p>
+      {bmi > 0 ? <ResultBMI /> : <Welcome />}
     </section>
   );
 };
