@@ -1,5 +1,5 @@
-import { calculateBmi } from "@/utils/bmi-utils";
-import { System } from "@/utils/types";
+import { calculateBmi, IN_PER_FOOT, LB_PER_STONE } from "@/utils/bmi-utils";
+import type { System } from "@/utils/types";
 import { useState } from "react";
 
 export const useCalculateBmi = (system: System) => {
@@ -23,11 +23,10 @@ export const useCalculateBmi = (system: System) => {
     values.weightSt &&
     values.weightLb
   ) {
-    height = +values.heightFt * 12 + +values.heightIn;
-    weight = +values.weightSt * 14 + +values.weightLb;
+    height = +values.heightFt * IN_PER_FOOT + +values.heightIn;
+    weight = +values.weightSt * LB_PER_STONE + +values.weightLb;
   }
 
-  console.log({ height, weight, system });
   const bmi = calculateBmi(height, weight, system);
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {

@@ -1,7 +1,9 @@
+import type { System } from "@/utils/types";
+
 import NumberInput from "@/components/common/NumberInput";
-import Outcomes from "../Outcomes";
 import { useCalculateBmi } from "@/hooks/useCalculateBmi";
-import { System } from "@/utils/types";
+
+import Outcomes from "../Outcomes";
 
 export const ImperialForm = () => {
   const system: System = "imperial";
@@ -30,6 +32,7 @@ export const ImperialForm = () => {
               unit="in"
               name="heightIn"
               id="heightIn"
+              // max={IN_PER_FOOT - 1}
               value={values.heightIn}
               onChange={onChange}
             />

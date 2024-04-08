@@ -11,6 +11,7 @@ const OVERWEIGHT_BMI = 29.9;
 const IMPERIAL_MULTIPLIER = 703;
 const METRIC_MULTIPLIER = 100;
 const LB_PER_STONE = 14;
+const IN_PER_FOOT = 12;
 
 function calculateBmi(
   height: number,
@@ -70,4 +71,10 @@ const getHealthyWeight = (
   return ["", ""];
 };
 
-export { getCondition, getHealthyWeight, calculateBmi };
+export {
+  getCondition,
+  getHealthyWeight,
+  calculateBmi,
+  IN_PER_FOOT,
+  LB_PER_STONE,
+};

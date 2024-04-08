@@ -12,7 +12,6 @@ export const NumberInput = ({ unit, ...rest }: NumberInputProps) => {
         type="number"
         min="1"
         placeholder="0"
-        pattern="^[1-9]+[0-9]*$"
         {...rest}
       />
       <p className="absolute right-4 top-1/2 -translate-y-1/2 text-2xl font-semibold tracking-tighter text-blue">
