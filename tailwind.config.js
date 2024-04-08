@@ -13,6 +13,9 @@ export default {
       fontFamily: {
         sans: ["Inter", "sans-serif"],
       },
+      fontSize: {
+        "3xl": "2rem",
+      },
       boxShadow: {
         card: "16px 32px 56px 0px rgba(143, 174, 207, 0.25)",
       },

@@ -1,4 +1,4 @@
 const Tips = () => {
-  return <div>Tips</div>;
+  return <section>Tips</section>;
 };
 export default Tips;
