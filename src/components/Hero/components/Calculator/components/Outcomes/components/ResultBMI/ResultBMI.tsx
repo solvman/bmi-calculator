@@ -12,13 +12,13 @@ export const ResultBMI = ({ bmi, height, system }: ResultBMIProps) => {
 
   return (
     <>
-      <div>
+      <div className="sm:flex-1">
         <h3 className="mb-2 font-semibold">Your BMI is...</h3>
         <p className="text-5xl font-semibold leading-[1.1] tracking-tighter">
           {bmi.toFixed(1)}
         </p>
       </div>
-      <p className="text-sm">
+      <p className="text-sm sm:flex-1">
         Your BMI suggests you're {getCondition(bmi)}. Your ideal weight is
         between{" "}
         <strong>

@@ -10,8 +10,8 @@ export const MetricForm = () => {
 
   return (
     <>
-      <form className="flex flex-col gap-y-4">
-        <div className="flex flex-col gap-y-2">
+      <form className="flex flex-col gap-y-4 sm:flex-row sm:gap-x-4">
+        <div className="flex flex-1 flex-col gap-y-2">
           <label
             htmlFor="height"
             className="text-sm font-normal leading-normal text-darkElectricBlue"
@@ -26,7 +26,7 @@ export const MetricForm = () => {
             onChange={onChange}
           />
         </div>
-        <div className="flex flex-col gap-y-2">
+        <div className="flex flex-1 flex-col gap-y-2">
           <label
             htmlFor="weight"
             className="text-sm font-normal leading-normal text-darkElectricBlue"

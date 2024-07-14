@@ -10,12 +10,12 @@ function Calculator() {
   const [value, setValue] = useState<System>("metric");
 
   return (
-    <article className="mx-6 -mt-[45%] flex flex-col gap-6 rounded-2xl bg-pureWhite p-6 shadow-card">
+    <article className="mx-6 -mt-[200px] flex flex-col gap-6 rounded-2xl bg-pureWhite p-6 shadow-card sm:mx-10 sm:-mt-[320px]">
       <fieldset className="border-red flex flex-col gap-6">
         <legend className="mb-6 text-2xl font-semibold tracking-tighter">
           Enter your details below
         </legend>
-        <ul className="flex">
+        <ul className="flex flex-row sm:gap-x-4">
           {SYSTEM_VALUES.map((system) => (
             <RadioButton
               key={system}

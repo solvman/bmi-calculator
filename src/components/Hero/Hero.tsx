@@ -11,10 +11,10 @@ const Hero = () => {
           alt=""
           aria-hidden
         />
-        <h1 className="mx-auto my-6 max-w-xs text-center text-5xl font-semibold leading-[1.1] tracking-tighter">
-          Body Mass Index Calculator
+        <h1 className="mx-auto my-6 max-w-xs text-center text-5xl font-semibold leading-[1.1] tracking-tighter text-gunmetal sm:max-w-sm">
+          Body Mass <br /> Index Calculator
         </h1>
-        <p className="mx-6 text-center leading-6">
+        <p className="mx-6 text-center leading-6 text-darkElectricBlue sm:mx-10">
           Better understand your weight in relation to your height using our
           body mass index (BMI) calculator. While BMI is not the sole
           determinant of a healthy weight, it offers a valuable starting point
