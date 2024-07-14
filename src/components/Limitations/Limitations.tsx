@@ -3,7 +3,7 @@ import LimitationCard from "../LimitationCard";
 
 const Limitations = () => {
   return (
-    <section className="pb-24 pl-5 pr-7 pt-16">
+    <section className="mb-24 ml-5 mr-7 mt-16 sm:mx-10 sm:my-24">
       <div className="mb-14 flex flex-col gap-y-8">
         <h2 className="text-center text-3xl font-semibold leading-8 tracking-tighter">
           Limitations of BMI
@@ -15,7 +15,7 @@ const Limitations = () => {
           beneficial to use.
         </p>
       </div>
-      <div className="flex flex-col gap-y-4">
+      <div className="flex flex-col gap-y-4 sm:grid sm:grid-cols-4 sm:gap-x-4 sm:gap-y-6">
         {limitationCards.map((card) => (
           <LimitationCard key={card.id} data={card} />
         ))}

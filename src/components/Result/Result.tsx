@@ -2,9 +2,15 @@ import image from "../../assets/images/image-man-eating.webp";
 
 const Result = () => {
   return (
-    <section className="pb-16 pt-12">
-      <img src={image} alt="Man eating sushi and smiling" />
-      <div className="mt-12 flex flex-col gap-y-8 px-6">
+    <section className="pb-16 pt-12 sm:my-24 sm:flex sm:flex-row sm:items-center sm:p-0">
+      <div className="sm:w-1/2 sm:self-stretch">
+        <img
+          className="h-full sm:relative sm:object-cover md:right-[43px]"
+          src={image}
+          alt="Man eating sushi and smiling"
+        />
+      </div>
+      <div className="mt-12 flex flex-col gap-y-8 px-6 sm:ml-0 sm:mr-10 sm:mt-0 sm:w-1/2">
         <h2 className="text-3xl font-semibold leading-8 tracking-tighter">
           What your BMI result means
         </h2>
