@@ -10,7 +10,7 @@ function Calculator() {
   const [value, setValue] = useState<System>("metric");
 
   return (
-    <article className="mx-6 -mt-[200px] flex flex-col gap-6 rounded-2xl bg-pureWhite p-6 shadow-card sm:mx-10 sm:-mt-[320px]">
+    <article className="mx-6 -mt-[200px] flex flex-col gap-6 rounded-2xl bg-pureWhite p-6 shadow-card sm:mx-10 sm:-mt-[320px] lg:w-[564px]">
       <fieldset className="border-red flex flex-col gap-6">
         <legend className="mb-6 text-2xl font-semibold tracking-tighter">
           Enter your details below

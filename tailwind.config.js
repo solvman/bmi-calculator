@@ -19,6 +19,12 @@ export default {
       boxShadow: {
         card: "16px 32px 56px 0px rgba(143, 174, 207, 0.25)",
       },
+      borderRadius: {
+        hero: "0px 0px 35px 35px",
+      },
+      backgroundImage: {
+        hero: "linear-gradient(290deg, #D6E6FE 0%, rgba(214, 252, 254, 0.00) 100%)",
+      },
     },
   },
   plugins: [require("@tailwindcss/forms")],
