@@ -14,7 +14,7 @@ const Result = () => {
         <h2 className="text-3xl font-semibold leading-8 tracking-tighter">
           What your BMI result means
         </h2>
-        <p className="text-base font-normal leading-normal text-darkElectricBlue">
+        <p className="text-dark-electric-blueBlue text-base font-normal leading-normal">
           A BMI range of 18.5 to 24.9 is considered a 'healthy weight.'
           Maintaining a healthy weight may lower your chances of experiencing
           health issues later on, such as obesity and type 2 diabetes. Aim for a

@@ -14,7 +14,7 @@ export const MetricForm = () => {
         <div className="flex flex-1 flex-col gap-y-2">
           <label
             htmlFor="height"
-            className="text-sm font-normal leading-normal text-darkElectricBlue"
+            className="text-dark-electric-blueBlue text-sm font-normal leading-normal"
           >
             Height
           </label>
@@ -29,7 +29,7 @@ export const MetricForm = () => {
         <div className="flex flex-1 flex-col gap-y-2">
           <label
             htmlFor="weight"
-            className="text-sm font-normal leading-normal text-darkElectricBlue"
+            className="text-dark-electric-blueBlue text-sm font-normal leading-normal"
           >
             Weight
           </label>

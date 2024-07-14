@@ -16,7 +16,7 @@ export const ImperialForm = () => {
         <div className="flex flex-col gap-y-2">
           <label
             htmlFor="heightFt"
-            className="text-sm font-normal leading-normal text-darkElectricBlue"
+            className="text-dark-electric-blueBlue text-sm font-normal leading-normal"
           >
             Height
           </label>
@@ -41,7 +41,7 @@ export const ImperialForm = () => {
         <div className="flex flex-col gap-y-2">
           <label
             htmlFor="weightSt"
-            className="text-sm font-normal leading-normal text-darkElectricBlue"
+            className="text-dark-electric-blueBlue text-sm font-normal leading-normal"
           >
             Weight
           </label>

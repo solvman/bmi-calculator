@@ -16,7 +16,7 @@ function TipCard({ data }: TipCardProps) {
         <h3 className="text-2xl font-semibold tracking-tighter">
           {data.title}
         </h3>
-        <p className="font-normal leading-6 text-darkElectricBlue">
+        <p className="text-dark-electric-blueBlue font-normal leading-6">
           {data.content}
         </p>
       </div>
