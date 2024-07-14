@@ -1,20 +1,16 @@
-import eatingIcon from "../../assets/images/icon-eating.svg";
-import { type TTip } from "../../utils/types";
+import { type TCard } from "../../utils/types";
 
 interface TipCardProps {
-  card: TTip;
+  data: TCard;
 }
 
-function TipCard({ card }: TipCardProps) {
+function TipCard({ data }: TipCardProps) {
   return (
     <div className="flex flex-col gap-y-6 px-6">
-      <img src={eatingIcon} alt="eating icon" className="mb-2 h-16 w-16" />
-      <h3 className="text-2xl font-semibold tracking-tighter">
-        Healthy eating
-      </h3>
+      <img src={data.icon} alt="eating icon" className="mb-2 h-16 w-16" />
+      <h3 className="text-2xl font-semibold tracking-tighter">{data.title}</h3>
       <p className="font-normal leading-6 text-darkElectricBlue">
-        Healthy eating promotes weight control, disease prevention, better
-        digestion, immunity, mental clarity, and mood.
+        {data.content}
       </p>
     </div>
   );
