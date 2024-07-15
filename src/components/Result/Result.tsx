@@ -2,7 +2,7 @@ import image from "../../assets/images/image-man-eating.webp";
 
 const Result = () => {
   return (
-    <section className="mx-auto max-w-[1160px] pb-16 pt-12 sm:my-24 sm:flex sm:flex-row sm:items-center sm:p-0 lg:items-end">
+    <section className="lg:before:bg-pattern-left relative mx-auto max-w-[1160px] pb-16 pt-12 sm:my-24 sm:flex sm:flex-row sm:items-center sm:p-0 lg:items-end lg:before:absolute lg:before:-top-[60px] lg:before:right-[90px] lg:before:h-[200px] lg:before:w-[85px] lg:before:bg-cover">
       <div className="sm:w-1/2 sm:self-stretch">
         <img
           className="h-full sm:relative sm:object-cover md:right-[43px] lg:right-0"

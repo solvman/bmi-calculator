@@ -6,7 +6,7 @@ interface TipCardProps {
 
 function TipCard({ data }: TipCardProps) {
   return (
-    <div className="flex flex-col gap-y-6 px-6 md:m-0 md:flex-row md:items-center md:gap-x-10 lg:flex-col lg:items-start lg:gap-x-10">
+    <div className="flex flex-col gap-y-6 px-6 md:m-0 md:flex-row md:items-center md:gap-x-10 lg:flex-col lg:items-start lg:gap-x-10 lg:px-0">
       <img
         src={data.icon}
         alt="eating icon"
