@@ -8,7 +8,7 @@ export const NumberInput = ({ unit, ...rest }: NumberInputProps) => {
   return (
     <div className="relative">
       <input
-        className="placeholder:text-gunmeta w-full rounded-xl border-borders px-6 py-5 pr-12 text-2xl font-semibold tracking-tighter placeholder:opacity-25"
+        className="w-full cursor-pointer rounded-xl border-borders px-6 py-5 pr-12 text-2xl font-semibold tracking-tighter placeholder:text-gunmetal placeholder:opacity-25 hover:border-blue"
         type="number"
         min="1"
         placeholder="0"
