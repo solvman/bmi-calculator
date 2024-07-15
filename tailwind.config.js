@@ -20,9 +20,15 @@ export default {
       },
       borderRadius: {
         hero: "0px 0px 35px 35px",
+        outcomes: "16px 80px 80px 16px",
       },
       backgroundImage: {
         hero: "linear-gradient(290deg, #D6E6FE 0%, rgba(214, 252, 254, 0.00) 100%)",
+        outcomes: "linear-gradient(90deg, #345FF6 0%, #587DFF 100%)",
+        tips: "",
+      },
+      letterSpacing: {
+        "tight-xl": "-2.4px",
       },
     },
   },

@@ -5,7 +5,7 @@ import Limitations from "./components/Limitations";
 
 function App() {
   return (
-    <main className="text-gunmetal">
+    <main className="text-dark-electric-blue">
       <Hero />
       <Result />
       <Tips />

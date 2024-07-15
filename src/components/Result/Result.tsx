@@ -2,10 +2,10 @@ import image from "../../assets/images/image-man-eating.webp";
 
 const Result = () => {
   return (
-    <section className="pb-16 pt-12 sm:my-24 sm:flex sm:flex-row sm:items-center sm:p-0">
+    <section className="mx-auto max-w-[1160px] pb-16 pt-12 sm:my-24 sm:flex sm:flex-row sm:items-center sm:p-0">
       <div className="sm:w-1/2 sm:self-stretch">
         <img
-          className="h-full sm:relative sm:object-cover md:right-[43px]"
+          className="h-full sm:relative sm:object-cover md:right-[43px] lg:right-0"
           src={image}
           alt="Man eating sushi and smiling"
         />
