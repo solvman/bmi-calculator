@@ -25,10 +25,13 @@ export default {
       backgroundImage: {
         hero: "linear-gradient(290deg, #D6E6FE 0%, rgba(214, 252, 254, 0.00) 100%)",
         outcomes: "linear-gradient(90deg, #345FF6 0%, #587DFF 100%)",
-        tips: "",
+        tips: "linear-gradient(290deg, rgba(214, 230, 254, 0.25) 0%, rgba(214, 252, 254, 0.00) 100%)",
       },
       letterSpacing: {
         "tight-xl": "-2.4px",
+      },
+      gridTemplateColumns: {
+        cards: "repeat(2, 365px)",
       },
     },
   },

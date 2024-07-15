@@ -2,7 +2,7 @@ import image from "../../assets/images/image-man-eating.webp";
 
 const Result = () => {
   return (
-    <section className="mx-auto max-w-[1160px] pb-16 pt-12 sm:my-24 sm:flex sm:flex-row sm:items-center sm:p-0">
+    <section className="mx-auto max-w-[1160px] pb-16 pt-12 sm:my-24 sm:flex sm:flex-row sm:items-center sm:p-0 lg:items-end">
       <div className="sm:w-1/2 sm:self-stretch">
         <img
           className="h-full sm:relative sm:object-cover md:right-[43px] lg:right-0"
@@ -10,8 +10,8 @@ const Result = () => {
           alt="Man eating sushi and smiling"
         />
       </div>
-      <div className="mt-12 flex flex-col gap-y-8 px-6 sm:ml-0 sm:mr-10 sm:mt-0 sm:w-1/2">
-        <h2 className="text-3xl font-semibold leading-8 tracking-tighter">
+      <div className="mt-12 flex flex-col gap-y-8 px-6 sm:ml-0 sm:mr-10 sm:mt-0 sm:w-1/2 lg:mb-10 lg:ml-20">
+        <h2 className="text-3xl font-semibold leading-8 tracking-tighter text-gunmetal lg:text-5xl">
           What your BMI result means
         </h2>
         <p className="text-dark-electric-blueBlue text-base font-normal leading-normal">
