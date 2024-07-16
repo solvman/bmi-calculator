@@ -9,7 +9,7 @@ function TipCard({ data }: TipCardProps) {
     <div className="flex flex-col gap-y-6 px-6 md:m-0 md:flex-row md:items-center md:gap-x-10 lg:flex-col lg:items-start lg:gap-x-10 lg:px-0">
       <img
         src={data.icon}
-        alt="eating icon"
+        alt={`${data.title} icon`}
         className="mb-2 h-16 w-16 md:m-0"
       />
       <div className="md:flex md:flex-col md:gap-y-6">

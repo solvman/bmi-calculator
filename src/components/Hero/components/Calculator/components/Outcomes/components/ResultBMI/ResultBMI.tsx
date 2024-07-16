@@ -13,7 +13,7 @@ export const ResultBMI = ({ bmi, height, system }: ResultBMIProps) => {
   return (
     <>
       <div className="sm:flex-1">
-        <h3 className="mb-2 font-semibold">Your BMI is...</h3>
+        <h2 className="mb-2 font-semibold">Your BMI is...</h2>
         <p className="text-5xl font-semibold leading-[1.1] tracking-tighter">
           {bmi.toFixed(1)}
         </p>
