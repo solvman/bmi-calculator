@@ -11,7 +11,7 @@ function Calculator() {
 
   return (
     <article className="flex w-full flex-col gap-y-6 rounded-2xl bg-white p-6 text-gunmetal shadow-card lg:max-w-[564px]">
-      <h2 className="visually-hidden">Bmi calculator form</h2>
+      <h2 className="sr-only">Bmi calculator form</h2>
       <fieldset className="border-red flex flex-col gap-6">
         <legend className="mb-6 text-2xl font-semibold tracking-tighter">
           Enter your details below
